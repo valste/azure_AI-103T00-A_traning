@@ -1,0 +1,204 @@
+
+-------------
+review1.txt
+
+Good Hotel and staff
+The Royal Hotel, London, UK
+3/2/2018
+Clean rooms, good service, great location near Buckingham Palace and Westminster Abbey, and so on. We thoroughly enjoyed our stay. The courtyard is very peaceful and we went to a restaurant which is part of the same group and is Indian ( West coast so plenty of fish) with a Michelin Star. We had the taster menu which was fabulous. The rooms were very well appointed with a kitchen, lounge, bedroom and enormous bathroom. Contact me at alex@contoso.com for more details.
+
+Language: English
+
+Entities
+        Hotel (Location)
+        staff (PersonType)
+        The Royal Hotel, London, UK (Address)
+        3/2/2018 (DateTime)
+        Buckingham Palace (Location)
+        Westminster Abbey (Location)
+        courtyard (Location)
+        Indian (Location)
+        West coast (Location)
+        fish (Product)
+        taster (Product)
+        rooms (Location)
+        kitchen (Location)
+        lounge (Location)
+        bedroom (Location)
+        bathroom (Location)
+        alex@contoso.com (Email)
+
+PII Entities
+        staff (PersonType)
+        The Royal Hotel, London, UK (Address)
+        3/2/2018 (DateTime)
+        Indian (PersonType)
+        alex@contoso.com (Email)
+Redacted Text:
+ Good Hotel and *****
+***************************
+********
+Clean rooms, good service, great location near Buckingham Palace and Westminster Abbey, and so on. We thoroughly enjoyed our stay. The courtyard is very peaceful and we went to a restaurant which is part of the same group and is ****** ( West coast so plenty of fish) with a Michelin Star. We had the taster menu which was fabulous. The rooms were very well appointed with a kitchen, lounge, bedroom and enormous bathroom. Contact me at **************** for more details.
+
+-------------
+review2.txt
+
+Tired hotel with poor service
+The Royal Hotel, London, United Kingdom
+5/6/2018
+This is a old hotel (has been around since 1950's) and the room furnishings are average - becoming a bit old now and require changing. The internet didn't work and had to come to one of their office rooms to check in for my flight home. My colleague John Smith says it's the worst hotel he's ever stayed in, and I'm inclined to agree!
+
+Language: English
+
+Entities
+        hotel (Location)
+        Hotel (Location)
+        London, United Kingdom (Address)
+        5/6/2018 (DateTime)
+        hotel (Location)
+        since 1950 (DateTime)
+        now (DateTime)
+        one (Quantity)
+        office rooms (Location)
+        flight (Event)
+        home (Location)
+        colleague (PersonType)
+        John Smith (Person)
+        hotel (Location)
+
+PII Entities
+        London, United Kingdom (Address)
+        5/6/2018 (DateTime)
+        now (DateTime)
+        colleague (PersonType)
+        John Smith (Person)
+Redacted Text:
+ Tired hotel with poor service
+The Royal Hotel, **********************
+********
+This is a old hotel (has been around since 1950's) and the room furnishings are average - becoming a bit old *** and require changing. The internet didn't work and had to come to one of their office rooms to check in for my flight home. My ********* ********** says it's the worst hotel he's ever stayed in, and I'm inclined to agree!
+
+-------------
+review3.txt
+
+Good location and helpful staff, but on a busy road.
+The Lombard Hotel, San Francisco, USA
+8/16/2018
+We stayed here in August after reading reviews. We were very pleased with location, just behind Chestnut Street, a cosmopolitan and trendy area with plenty of restaurants to choose from. The
+Marina district was lovely to wander through, very interesting houses. Make sure to walk to the San Francisco Museum of Fine Arts and the Marina to get a good view of Golden Gate bridge and the city. On a bus route and easy to get into centre. Rooms were clean with plenty of room and staff were friendly and helpful. The only down side was the noise from Lombard Street so ask to have a room furthest away from traffic noise.
+
+Language: English
+
+Entities
+        staff (Skill)
+        road (Location)
+        San Francisco (Location)
+        USA (Location)
+        8/16/2018 (DateTime)
+        August (DateTime)
+        Chestnut Street (Address)
+        restaurants (Location)
+        Marina district (Location)
+        San Francisco Museum of Fine Arts (Location)
+        Marina (Location)
+        Golden Gate bridge (Location)
+        city (Location)
+        bus route (Location)
+        centre (Location)
+        Rooms (Location)
+        staff (PersonType)
+        Lombard Street (Address)
+        room (Location)
+
+PII Entities
+        staff (PersonType)
+        USA (Address)
+        8/16/2018 (DateTime)
+        Chestnut Street (Address)
+        staff (PersonType)
+        Lombard Street (Address)
+Redacted Text:
+ Good location and helpful *****, but on a busy road.
+The Lombard Hotel, San Francisco, ***
+*********
+We stayed here in August after reading reviews. We were very pleased with location, just behind ***************, a cosmopolitan and trendy area with plenty of restaurants to choose from. The
+Marina district was lovely to wander through, very interesting houses. Make sure to walk to the San Francisco Museum of Fine Arts and the Marina to get a good view of Golden Gate bridge and the city. On a bus route and easy to get into centre. Rooms were clean with plenty of room and ***** were friendly and helpful. The only down side was the noise from ************** so ask to have a room furthest away from traffic noise.
+
+-------------
+review4.txt
+
+Very noisy and rooms are tiny
+The Lombard Hotel, San Francisco, USA
+9/5/2018
+Hotel is located on Lombard street which is a very busy SIX lane street directly off the Golden Gate Bridge. Traffic from early morning until late at night especially on weekends. Noise would not be so bad if rooms were better insulated but they are not. Had to put cotton balls in my ears to be able to sleep--was too tired to enjoy the city the next day. Rooms are TINY. I picked the room because it had two queen size beds--but the room barely had space to fit them. With family of four in the room it was tight. With all that said, rooms are clean and they've made an effort to update them. The hotel is in Marina district with lots of good places to eat, within walking distance to Presidio. May be good hotel for young stay-up-late adults on a budget    
+
+
+Language: English
+
+Entities
+        rooms (Location)
+        San Francisco (Location)
+        USA (Location)
+        9/5/2018 (DateTime)
+        Hotel (Location)
+        Lombard street (Address)
+        SIX (Quantity)
+        Golden Gate Bridge (Location)
+        from early morning until late at night (DateTime)
+        weekends (DateTime)
+        rooms (Location)
+        cotton balls (Product)
+        city (Location)
+        the next day (DateTime)
+        Rooms (Location)
+        room (Location)
+        two (Quantity)
+        queen (Product)
+        beds (Product)
+        room (Location)
+        four (Quantity)
+        room (Location)
+        rooms (Location)
+        hotel (Location)
+        Marina district (Location)
+        Presidio (Location)
+        hotel (Location)
+        adults (PersonType)
+
+PII Entities
+        USA (Address)
+        9/5/2018 (DateTime)
+        Lombard street (Address)
+        the next day (DateTime)
+        adults (PersonType)
+Redacted Text:
+ Very noisy and rooms are tiny
+The Lombard Hotel, San Francisco, ***
+********
+Hotel is located on ************** which is a very busy SIX lane street directly off the Golden Gate Bridge. Traffic from early morning until late at night especially on weekends. Noise would not be so bad if rooms were better insulated but they are not. Had to put cotton balls in my ears to be able to sleep--was too tired to enjoy the city ************. Rooms are TINY. I picked the room because it had two queen size beds--but the room barely had space to fit them. With family of four in the room it was tight. With all that said, rooms are clean and they've made an effort to update them. The hotel is in Marina district with lots of good places to eat, within walking distance to Presidio. May be good hotel for young stay-up-late ****** on a budget    
+
+
+-------------
+review5.txt
+
+Un hôtel agréable
+L'Hotel Buckingham, Londres, UK
+J’adore cet hôtel. Le personnel est très amical et les chambres sont confortables.
+
+Language: French
+
+Entities
+        hôtel (Location)
+        Hotel Buckingham (Location)
+        Londres (Location)
+        UK (Location)
+        hôtel (Location)
+        personnel (PersonType)
+        chambres (Location)
+
+PII Entities
+        personnel (PersonType)
+Redacted Text:
+ Un hôtel agréable
+L'Hotel Buckingham, Londres, UK
+J’adore cet hôtel. Le ********* est très amical et les chambres sont confortables.
