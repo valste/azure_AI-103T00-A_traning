@@ -1,0 +1,168 @@
+$ python run_all.py 
+🚀 Starting server subprocesses...
+🚀 Starting title_agent_server on port 10007
+INFO:     Started server process [28996]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://localhost:10007 (Press CTRL+C to quit)
+INFO:     127.0.0.1:63710 - "GET /health HTTP/1.1" 200 OK
+✅ title_agent_server is healthy and ready!
+🚀 Starting outline_agent_server on port 10008
+INFO:     Started server process [26728]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://localhost:10008 (Press CTRL+C to quit)
+INFO:     ::1:63715 - "GET /health HTTP/1.1" 200 OK
+✅ outline_agent_server is healthy and ready!
+🚀 Starting routing_agent_server on port 10009
+INFO:     Started server process [8312]
+INFO:     Waiting for application startup.
+INFO:     ::1:63721 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:     ::1:63723 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://localhost:10009 (Press CTRL+C to quit)
+Starting up: Initializing routing agent...
+Found remote agents: [
+  Microsoft Foundry Title Agent: An intelligent title generator agent powered by Foundry. I can help you generate catchy titles for your articles.,
+  AI Foundry Outline Agent: An intelligent outline generator agent powered by Azure AI Foundry. I can help you generate outlines for your articles.
+✅ routing_agent_server is healthy and ready!
+]
+Routing agent initialized.
+INFO:     ::1:63730 - "GET /health HTTP/1.1" 200 OK
+Enter a prompt for the agent. Type 'quit' to exit.
+User: Create a title and outline for an article about React programming.
+INFO:     ::1:63734 - "POST / HTTP/1.1" 200 OK
+INFO:     ::1:63742 - "POST / HTTP/1.1" 200 OK
+Agent: Processing request, please wait.
+INFO:     ::1:63732 - "POST /message HTTP/1.1" 200 OK
+Agent: Here is a catchy title and an outline for your article about React programming:
+
+Title: "Mastering React: Build Dynamic Web Apps with Ease"
+
+Outline:
+1. Introduction to React Programming
+2. Core Concepts: Components and JSX
+3. State and Props Management
+4. Handling Events and Lifecycle Methods
+5. Using React Hooks Effectively
+6. Building and Deploying React Applications
+
+Let me know if you need any more help!
+User:
+Agent: Processing request, please wait.
+INFO:     ::1:63747 - "POST /message HTTP/1.1" 200 OK
+Agent: No response from agent.
+User: quit
+
+
+---> kills the bash.exe
+---> fix: adjust shutdown block in run_all.py:
+```python
+finally:
+    print("🛑 Stopping server subprocesses...")
+
+    for process in server_procs:
+        if process.poll() is None:
+            try:
+                process.terminate()
+                process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                print("⚠️ Process did not terminate gracefully. Killing it...")
+                process.kill()
+            except Exception as e:
+                print(f"⚠️ Error while stopping process: {e}")
+```
+
+------------------------------------------------
+--> after the fix getting my bash promt back
+
+$ python run_all.py 
+🚀 Starting server subprocesses...
+🚀 Starting title_agent_server on port 10007
+INFO:     Started server process [18212]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://localhost:10007 (Press CTRL+C to quit)
+INFO:     127.0.0.1:63114 - "GET /health HTTP/1.1" 200 OK
+✅ title_agent_server is healthy and ready!
+🚀 Starting outline_agent_server on port 10008
+INFO:     Started server process [25236]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://localhost:10008 (Press CTRL+C to quit)
+INFO:     127.0.0.1:63118 - "GET /health HTTP/1.1" 200 OK
+✅ outline_agent_server is healthy and ready!
+🚀 Starting routing_agent_server on port 10009
+INFO:     Started server process [28020]
+INFO:     Waiting for application startup.
+INFO:     ::1:63124 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:     ::1:63126 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://localhost:10009 (Press CTRL+C to quit)
+Starting up: Initializing routing agent...
+Found remote agents: [
+  Microsoft Foundry Title Agent: An intelligent title generator agent powered by Foundry. I can help you generate catchy titles for your articles.,
+  AI Foundry Outline Agent: An intelligent outline generator agent powered by Azure AI Foundry. I can help you generate outlines for your articles.
+]
+Routing agent initialized.
+INFO:     ::1:63134 - "GET /health HTTP/1.1" 200 OK
+✅ routing_agent_server is healthy and ready!
+Enter a prompt for the agent. Type 'quit' to exit.
+User: Create a title and outline for an article about React programming.
+Agent: Processing request, please wait.
+INFO:     ::1:63136 - "POST /message HTTP/1.1" 200 OK
+Agent: I encountered a technical issue while trying to generate the title and outline. Meanwhile, I can help by suggesting a title and outline myself.
+
+Here is a suggested title and outline for an article about React programming:
+
+Title:
+"Mastering React: A Comprehensive Guide to Building Dynamic Web Applications"
+
+Outline:
+1. Introduction to React
+   - What is React?
+   - History and evolution
+   - Why use React for web development?
+
+2. Setting Up the React Environment
+   - Installing Node.js and npm
+   - Creating a React app using Create React App
+   - Overview of project structure
+
+3. React Basics
+   - Components and JSX
+   - Props and State
+   - Handling events
+
+4. Advanced React Concepts
+   - Lifecycle methods and hooks
+   - Context API and state management
+   - Routing with React Router
+
+5. Styling in React
+   - CSS and inline styles
+   - CSS-in-JS libraries
+
+6. Testing React Applications
+   - Unit testing with Jest
+   - Component testing with React Testing Library
+
+7. Performance Optimization
+   - Memoization and lazy loading
+   - Code splitting
+
+8. Deploying React Applications
+   - Building for production
+   - Hosting options
+
+9. Conclusion
+   - Recap of key concepts
+   - Resources for further learning
+
+If you want, I can still try again to generate these using specialized agents. Would you like me to do that?
+User: quit
+Goodbye!
+🛑 Stopping server subprocesses...
+(.venv) 
+valer@DESKTOP-5NIEP1I MINGW64 ~/PROJECTS/AI_projects/learnings/azure_AI-103T00-A_traning/06-build-remote-agents-with-a2a/python (master)
+$

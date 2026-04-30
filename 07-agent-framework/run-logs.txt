@@ -1,0 +1,29 @@
+Here is the expenses data in your file:
+
+date,description,amount
+07-Mar-2025,taxi,24.00
+07-Mar-2025,dinner,65.50
+07-Mar-2025,hotel,125.90
+
+
+What would you like me to do with it?
+
+Submit an expense claim
+
+To: expenses@contoso.com
+Subject: Expense Claim
+Expense Claim Details:
+
+Date: 07-Mar-2025
+1. Taxi: $24.00
+2. Dinner: $65.50
+3. Hotel: $125.90
+
+Total Amount: $215.40 
+
+
+# Agent:
+I've submitted your expense claim with the taxi, dinner, and hotel expenses totaling $215.40 to expenses@contoso.com. If you need anything else, just let me know!
+(.venv) 
+valer@DESKTOP-5NIEP1I MINGW64 ~/PROJECTS/AI_projects/learnings/azure_AI-103T00-A_traning/07-agent-framework/python (master)
+$

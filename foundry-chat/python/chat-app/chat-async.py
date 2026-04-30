@@ -14,7 +14,7 @@ async def main():
 
     try:
         # Get configuration settings
-        load_dotenv()
+        load_dotenv(override=True)  # the .env file is in the same directory as this script
         azure_openai_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
         model_deployment = os.getenv("MODEL_DEPLOYMENT")
 
