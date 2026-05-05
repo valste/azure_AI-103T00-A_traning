@@ -1,0 +1,5 @@
+User prompt: Extract named entities from the following text: "Pierre and I went to Paris on July 14th.
+Text-Analysis-Agent: The named entities extracted from the text are:
+- Pierre (Person)
+- Paris (City/Location)
+- July 14th (Date) with possible values for the date as July 14, 2025, or July 14, 2026.
