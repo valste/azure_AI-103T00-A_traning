@@ -1,0 +1,45 @@
+Using endpoint: https://vst-5451-resource.services.ai.azure.com/api/projects/vst-5451
+Using agent: speech-agent
+User prompt (or 'quit'): Synthesize "Better a witty fool, than a foolish wit!" as speech using the voice "en-GB-SoniaNeural".
+speech-agent: Here is your synthesized speech using the "en-GB-SoniaNeural" voice: [Listen here](https://vstazuretraining.blob.core.windows.net/files/tts/20260505165943_bd4cc56d.mp3?sv=2025-11-05&spr=https&st=2026-05-05T16%3A40%3A22Z&se=2026-05-06T00%3A55%3A22Z&sr=c&sp=racwdl&sig=dtzSUTE%2FSQZ6p%2FerGRMM%2BOxfySN%2BtvAFeF9uWYDhSvM%3D).
+
+The quote "Better a witty fool, than a foolish wit!" is from William Shakespeare's play "Twelfth Night" (Act 1, Scene 5) [Twelfth Night - Shakespeare](https://www.folger.edu/explore/shakespeares-works/twelfth-night/).
+User prompt (or 'quit'): 
+(.venv) 
+valer@DESKTOP-5NIEP1I MINGW64 ~/PROJECTS/AI_projects/learnings/azure_AI-103T00-A_traning/05-speech-tool/Python/speech-client (master)
+$ 
+
+
+REMARKS:
+
+1.
+IAM:
+For this Speech/Language storage scenario, Microsoft says the storage account should give 
+Storage Blob Data Contributor to the Foundry resource managed identity. 
+The doc specifically says not to assign the role to individual project identities 
+for this Speech/Language BYOS scenario.
+
+--> assign Storage Blob Data Contributor like this:
+In the left resource list, click:
+vstazuretraining
+Open:
+Access control (IAM)
+Click:
+Add > Add role assignment
+Role:
+Storage Blob Data Contributor
+Members tab:
+Assign access to: Managed identity
+Click Select members.
+For managed identity type, look for one of these:
+Azure AI services
+Cognitive Services
+Foundry
+Select:
+vst-5451-resource
+Click:
+Review + assign
+-->wait 5 mins :) -> test 
+
+2.
+Changing of the permissions for the SASAS URL takes some minutes
