@@ -1,0 +1,39 @@
+
+============================================================
+🎙️  AZURE VOICELIVE VOICE AGENT
+============================================================
+⚙️  Session configured
+🔊 Speakers ready
+
+✅ Ready! Start speaking...
+Press Ctrl+C to exit
+
+📡 Connected to agent: speech-agent
+🎤 Microphone started
+🎤 Listening...
+🤔 Thinking...
+👤 You: Hi there.
+✓ Response complete
+
+🤖 Agent: Hello! How can I help you today?
+🎤 Listening...
+🤔 Thinking...
+👤 You: I'm hungry.
+🎤 Listening...
+✓ Response complete
+
+🤖 Agent: Thanks for letting me know! Are you looking for meal or snack suggestions, recipes, or nearby restaurant recommendations? Let me know your preferences or dietary needs, and I can help!
+🤔 Thinking...
+👤 You: Thanks for letting me know.
+✓ Response complete
+
+🤖 Agent: You’re welcome! If you have any specific cravings or questions, just let me know—I'm here to help!
+🎤 Listening...
+🤔 Thinking...
+👤 You: Okay, quit.
+✓ Response complete
+
+🤖 Agent: Understood. If you need help with anything else in the future, just let me know!
+🔇 Audio stopped
+
+👋 Goodbye!

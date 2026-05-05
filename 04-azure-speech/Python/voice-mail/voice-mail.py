@@ -22,7 +22,7 @@ def main():
         credential = DefaultAzureCredential()
         speech_config = speech_sdk.SpeechConfig(
             token_credential=credential, endpoint=foundry_endpoint
-        )
+        )                               
 
         # Loop until user quits
         inputText = ""
