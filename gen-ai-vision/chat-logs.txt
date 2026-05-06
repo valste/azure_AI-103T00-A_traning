@@ -1,0 +1,28 @@
+
+The selected fruit is orange.
+Type /select to choose a fruit image, or ask a question.
+Type quit to exit.
+Your prompt: what is it?
+Getting a response ...
+
+This is a mandarin orange. Mandarin oranges are small citrus fruits with a bright orange skin that is relatively easy to peel compared to other oranges. They are known for their sweet taste and are commonly eaten fresh, used in salads, or made into juices. The skin has a slightly bumpy texture, as seen in the image.
+
+The selected fruit is orange.
+Type /select to choose a fruit image, or ask a question.
+Type quit to exit.
+Your prompt: /select    
+Choose 1 for orange, 2 for dragon fruit: 2
+Dragon fruit selected.
+
+The selected fruit is dragon fruit.
+Type /select to choose a fruit image, or ask a question.
+Type quit to exit.
+Your prompt: what is it
+Getting a response ...
+
+This is a dragon fruit, also known as pitaya or pitahaya. It comes from a type of cactus and is known for its vibrant pink or red skin with green scales and its white or red flesh dotted with tiny black seeds. The fruit has a mildly sweet taste and a texture similar to kiwi due to the seeds. Dragon fruit is not only visually striking but also nutritious, rich in vitamin C, fiber, and antioxidants. It is often eaten fresh, added to smoothies, or used in desserts.
+
+The selected fruit is dragon fruit.
+Type /select to choose a fruit image, or ask a question.
+Type quit to exit.
+Your prompt: quit
