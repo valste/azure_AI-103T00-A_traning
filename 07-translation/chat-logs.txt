@@ -1,0 +1,36 @@
+text-to-text
+
+
+137 languages supported.
+(See https://learn.microsoft.com/azure/ai-services/translator/language-support#translation)
+Enter a target language code for translation (for example, 'en'):
+de
+Enter text to translate ('quit' to exit):How is life?
+'How is life?' was translated from en to de as 'Wie ist das Leben?'.
+Enter text to translate ('quit' to exit):quit
+(.venv) 
+valer@DE
+
+---------
+to hindi
+
+137 languages supported.
+(See https://learn.microsoft.com/azure/ai-services/translator/language-support#translation)
+Enter a target language code for translation (for example, 'en'):
+hi
+Enter text to translate ('quit' to exit):i hope doing right things to make this world a better place to be!
+'i hope doing right things to make this world a better place to be!' was translated from en to hi as 'मुझे उम्मीद है कि इस दुनिया को एक बेहतर जगह बनाने के लिए सही चीजें कर रहा हूं!'.
+Enter text to translate ('quit' to exit):
+
+--------------------------------------------------------------
+spech-to-speach
+
+Ready to translate from en-US
+Ready to use speech service.
+Speak now...
+Translating 'Doing the right things. I hope I make the world a better place.'
+fr: 'Faire les bonnes choses. J’espère rendre le monde meilleur.'
+es: 'Haciendo lo correcto. Espero hacer del mundo un lugar mejor.'
+hi: 'सही काम करना। मुझे उम्मीद है कि मैं दुनिया को एक बेहतर जगह बनाऊंगा।'
+
+
