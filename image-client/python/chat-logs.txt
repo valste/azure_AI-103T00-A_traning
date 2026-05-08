@@ -1,0 +1,40 @@
+1.
+
+Enter the prompt (or type 'quit' to exit): A female robot eating apple on the moon
+
+Image generation token usage:
+  No usage object was returned for this request.
+  This can happen depending on the image model/API version.
+
+Image saved as C:\Users\valer\PROJECTS\AI_projects\learnings\azure_AI-103T00-A_traning\image-client\python\images\image_1.png
+
+2.
+
+Enter the prompt (or type 'quit' to exit): A female robot eating an apple on the moon. Her face is visible.
+
+Image generation token usage:
+  No usage object was returned for this request.
+  This can happen depending on the image model/API version.
+
+3.
+
+-------> this request was blocked by copy right guard rail beacause of Jason Statham
+
+Image saved as C:\Users\valer\PROJECTS\AI_projects\learnings\azure_AI-103T00-A_traning\image-client\python\images\image_2.png
+Enter the prompt (or type 'quit' to exit): Jason Statham walking through the sky.
+Error: {"error":{"code":"Bad Request","message":"Content rejected due to Bing blocklist triggered.","status":400}}
+Please check this guide to understand why this error code might have been returned
+https://docs.microsoft.com/en-us/azure/machine-learning/how-to-troubleshoot-online-endpoints#http-status-codes
+
+
+4.
+ a cool one
+
+ Enter the prompt (or type 'quit' to exit): a black apple with a worm inside
+
+Image generation token usage:
+  Usage metadata was not returned by the service.
+  This is normal for some Azure OpenAI / Foundry image responses.
+
+Image saved as C:\Users\valer\PROJECTS\AI_projects\learnings\azure_AI-103T00-A_traning\image-client\python\images\image_1.png
+Enter the prompt (or type 'quit' to exit): 
