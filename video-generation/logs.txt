@@ -1,0 +1,88 @@
+
+=== Video Generation Application ===
+
+Endpoint: https://vst-5451-resource.services.ai.azure.com/openai/v1
+Model deployment: sora-2
+
+=== Cost tracking configuration ===
+Cost currency: EUR
+Configured price per second: EUR 0.4273
+Price source: SORA_PRICE_PER_SECOND_EUR
+Budget limit: EUR 2.0000
+Budget source: MAX_TOTAL_ESTIMATED_COST_EUR
+
+Select a video generation scenario and press Enter:
+1) Text-to-video
+2) Remix video
+3) Image-to-video
+q) Quit
+
+Your choice: 3
+
+=== Scenario 3: Image-to-video ===
+Enter reference image path [reference_720x1280.png]:
+Checking for reference image at: reference_720x1280.png
+Enter image-to-video prompt [A 4-second cinematic macro video using the reference image as the starting frame:
+        a glossy black apple sits centered on a soft gray studio background in gentle falling rain.       
+        The oval opening in the apple subtly moves as a cute, friendly worm slowly crawls out.
+        The worm has soft beige skin, a rounded face, tiny expressive eyes,
+        and a warm charming personality — not scary, not gross.
+
+        0–1s: The apple remains still, rain streaks down, subtle reflections on the glossy black skin.    
+        1–2.5s: The worm gently pushes forward from inside the oval hole, wiggling naturally and looking curious.
+        2.5–4s: The worm fully emerges halfway out of the apple, turns toward the camera, pauses, and gives a
+        friendly smile directly to the viewer.
+
+        Style: whimsical but realistic, premium studio lighting, shallow depth of field,
+        detailed rain droplets, smooth natural motion, clean cinematic composition. Keep the apple shape, 
+        black glossy surface, green leaf, gray background, and existing opening consistent with the reference image.
+        Avoid horror, gore, exaggerated slime, deformation, extra insects, or cartoonish overacting.]:    
+Enter video size [720x1280]: 
+Enter video duration in seconds [4]: 
+Enter output filename [happy_worm.mp4]: 
+
+=== Planned cost estimate: image-to-video ===
+  Model:                  sora-2
+  Size:                   720x1280
+  Billable video seconds: 4.0
+  Price per second:       EUR 0.4273
+  Estimated job cost:     EUR 1.7092
+  Current total estimate: EUR 0.0000
+  Projected total:        EUR 1.7092
+  Price source:           SORA_PRICE_PER_SECOND_EUR
+  Budget limit:           EUR 2.0000
+  Budget source:          MAX_TOTAL_ESTIMATED_COST_EUR
+
+=== Cost recorded: image-to-video ===
+  Estimated job cost:  EUR 1.7092
+  Cumulative estimate: EUR 1.7092
+
+Video creation started. ID: video_69fe247e5d448190b306fc5cd866acfe
+Initial status: queued
+
+=== Video job info: Initial image-to-video request ===
+  Video ID:                video_69fe247e5d448190b306fc5cd866acfe
+  Model:                   sora-2
+  Status:                  queued
+  Progress:                0
+  Size:                    720x1280
+  Billable video seconds:  4.0
+
+Status: in_progress. Waiting 20 seconds...
+Status: in_progress. Waiting 20 seconds...
+Status: in_progress. Waiting 20 seconds...
+Video successfully completed!
+
+=== Video job info: Completed image-to-video request ===
+  Video ID:                video_69fe247e5d448190b306fc5cd866acfe
+  Model:                   sora-2
+  Status:                  completed
+  Progress:                100
+  Size:                    720x1280
+  Billable video seconds:  4.0
+
+Downloading video video_69fe247e5d448190b306fc5cd866acfe...
+Saved video to happy_worm.mp4
+
+=== Video generation complete ===
+Final cumulative estimated cost: EUR 1.7092
