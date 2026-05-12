@@ -1,0 +1,53 @@
+
+Choose a file (1, 2, or 3), or anything else to exit: 1
+Analyzing with mycontentunderstandinganalyzer analyzer...
+  File: images/image1.jpg
+
+Description:
+A giraffe standing in a grassy savanna landscape with a dramatic sky and clouds in the background. The giraffe is prominent in the foreground, showcasing its long neck and distinctive patterned coat.
+
+Tags:
+  - giraffe
+  - savanna
+  - wildlife
+  - animal
+  - nature
+  - grassland
+  - clouds
+  - sky
+  - Africa
+
+Choose a file (1, 2, or 3), or anything else to exit: 2
+Analyzing with mycontentunderstandinganalyzer analyzer...
+  File: images/image2.jpg
+
+Description:
+The image shows a large elephant standing in tall grass in a savanna landscape. The elephant is facing directly towards the camera, with its ears spread wide and tusks visible. The background features open grassland and a cloudy sky.
+
+Tags:
+  - elephant
+  - savanna
+  - wildlife
+  - nature
+  - grassland
+  - animal
+  - tusks
+
+Choose a file (1, 2, or 3), or anything else to exit: 3
+Analyzing with mycontentunderstandinganalyzer analyzer...
+  File: images/image3.jpg
+
+Description:
+A male lion is sitting in tall, dry grass, looking off to the side. The scene appears to be in a savanna or grassland, with the lion partially camouflaged by the surrounding vegetation. The lighting suggests it may be early morning or late afternoon.
+
+Tags:
+  - lion
+  - male lion
+  - savanna
+  - grassland
+  - wildlife
+  - nature
+  - animal
+  - big cat
+
+Choose a file (1, 2, or 3), or anything else to exit: quit
