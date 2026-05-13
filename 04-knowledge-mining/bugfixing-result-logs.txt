@@ -1,0 +1,231 @@
+1. Missing fields error:
+$:
+() Invalid expression: Could not find a property named 'people' on type 'search.document'.
+Parameter name: $select
+Code: 
+Message: Invalid expression: Could not find a property named 'people' on type 'search.document'.
+Parameter name: $select
+(.venv) 
+--------------------------------------------
+
+2.checking index fields:
+
+$ python diagnostics.py 
+
+Fields in index: margies-index
+
+merged_content
+title
+id
+keyPhrases
+persons
+locations
+text
+layoutText
+tags
+categories
+content
+metadata_storage_content_type
+metadata_storage_size
+metadata_storage_last_modified
+metadata_storage_content_md5
+metadata_storage_file_extension
+metadata_content_type
+metadata_language
+metadata_author
+metadata_title
+metadata_creation_date
+-----------------------------------------------
+
+3. fixing error by adjusting the query:
+
+ # Search the index
+found_documents = search_client.search(
+    search_text=query_text,
+    select=["title", "id", "locations", "persons", "keyPhrases"],
+    order_by=["search.score() desc"], #order by relevance score instead
+    #order_by=["metadata_storage_name"], #doesn't exist asd index field
+    include_total_count=True
+)
+
+-----------------------------------
+
+4. test run:
+
+query: London
+
+Search returned 2 documents:
+
+Document: London Brochure.pdf
+ - Locations:
+   - London
+   - England
+   - United
+   - River Thames
+   - Great
+   - Britain
+   - Romans
+   - Londinium
+   - Middlesex
+   - Essex
+   - Surrey
+   - Kent
+   - Hertfordshire
+   - Greater London
+   - Outdoors
+   - London Hotels
+   - Buckingham Hotel
+   - hotel
+   - Buckingham Palace
+   - Regent’s Park
+   - Trafalgar
+   - City Hotel
+   - Tower Bridge
+   - Tower of London
+   - Kensington Hotel
+   - Earl’s Court
+   - Trafalgar Square
+ - People:
+ - Key phrases:
+   - The Kensington Hotel Budget accommodation
+   - 1.12-square- mile medieval boundaries
+   - following accommodation options
+   - The Buckingham Hotel
+   - The City Hotel
+   - Tower Bridge Fountains
+   - Comfortable hotel
+   - Buckingham Palace
+   - United Kingdom
+   - River Thames
+   - major settlement
+   - 19th century
+   - Best time
+   - Averag Precipitation
+   - Average Temperature
+   - major sights
+   - Trafalgar Square
+   - Luxury rooms
+   - walking distance
+   - populous city
+   - Travel Presents
+   - ancient core
+   - Greater London
+   - London Assembly
+   - London Hotels
+   - Margie
+   - capital
+   - England
+   - south
+   - island
+   - Britain
+   - two
+   - millennia
+   - Romans
+   - metropolis
+   - Middlesex
+   - Essex
+   - Surrey
+   - Kent
+   - Hertfordshire
+   - Mayor
+   - Leisure
+   - Outdoors
+   - Historical
+   - Arts
+   - Culture
+   - Jun-Aug
+   - Regent
+   - Park
+   - Earl
+   - Court
+   - trip
+
+Document: Margies Travel Company Info.pdf
+ - Locations:
+   - Accommodation
+   - Dubai
+   - Las Vegas
+   - London
+   - New York
+   - San Francisco
+ - People:
+   - Marjorie Long
+   - Logan Reid
+   - Emma Luffman
+   - Deepak Nadar
+ - Key phrases:
+   - world-leading travel agency
+   - best travel experts
+   - international reach
+   - Currency Exchange
+   - Las Vegas
+   - New York
+   - San Francisco
+   - leadership team
+   - Marjorie Long
+   - Logan Reid
+   - Emma Luffman
+   - Deepak Nadar
+   - Strategic Director
+   - Margie
+   - local
+   - expertise
+   - Flights
+   - Accommodation
+   - Transfers
+   - Visas
+   - Excursions
+   - trips
+   - Dubai
+   - London
+   - CEO
+   - CFO
+   - website
+
+
+   query: Flights
+
+   Search returned 1 documents:
+
+Document: Margies Travel Company Info.pdf
+ - Locations:
+   - Accommodation
+   - Dubai
+   - Las Vegas
+   - London
+   - New York
+   - San Francisco
+ - People:
+   - Marjorie Long
+   - Logan Reid
+   - Emma Luffman
+   - Deepak Nadar
+ - Key phrases:
+   - world-leading travel agency
+   - best travel experts
+   - international reach
+   - Currency Exchange
+   - Las Vegas
+   - New York
+   - San Francisco
+   - leadership team
+   - Marjorie Long
+   - Logan Reid
+   - Emma Luffman
+   - Deepak Nadar
+   - Strategic Director
+   - Margie
+   - local
+   - expertise
+   - Flights
+   - Accommodation
+   - Transfers
+   - Visas
+   - Excursions
+   - trips
+   - Dubai
+   - London
+   - CEO
+   - CFO
+   - website
+Enter a query (or type 'quit' to exit):
