@@ -41,6 +41,6 @@ def get_weekly_sales() -> dict:
         "Dry Shampoo": 17,
     }
 
-
-# Run the MCP server
-mcp.run()
+if __name__ == "__main__":
+    # Run the MCP server
+    mcp.run()
